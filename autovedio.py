@@ -122,8 +122,8 @@ while True:
         #<div data-v-65ba481a="" class="mvp-play-rate">
     #   2.0X
     # </div>
-    #     element_x2 = driver.find_element(By.CSS_SELECTOR, 'div.mvp-play-rate')
-    #     element_x2.click()
+        element_x2 = driver.find_element(By.CSS_SELECTOR, 'div.mvp-play-rate')
+        element_x2.click()
         # <a class="next ng-binding ng-scope" ng-click="changeActivity(next)" ng-if="next">下一个: 1.4 组织层数据模型</a>
         next_button = driver.find_element(By.XPATH, '//a[@class="next ng-binding ng-scope"]')
 
@@ -139,7 +139,7 @@ while True:
         print(int(duration.split(':')[0]) * 3600 + int(duration.split(':')[1]) * 60 + int(duration.split(':')[2]) + 5)
         # 程序sleep时间
         time.sleep(
-            int(duration.split(':')[0]) * 3600 + int(duration.split(':')[1]) * 60 + int(duration.split(':')[2]) + 5)
+            int(duration.split(':')[0]) * 3600 + int(duration.split(':')[1]) * 60 + int(duration.split(':')[2]) / 2 + 5)
         next_button.click()
         sleep(10)
     except:
